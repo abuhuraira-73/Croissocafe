@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "_Layout";
+}
+
+
+<!-- header begin -->
+<header class="header_center">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- logo begin -->
+                <div id="logo">
+                    <a href="03_luxury-index.html">
+                        <img class="logo logo_dark_bg" src="~/Content/New photos/CroissoCafe logo with name png1.png" alt=""> 
+                        <img class="logo logo_light_bg" src="~/Content/03_images/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- logo close -->
+                <!-- small button begin -->
+                <span id="menu-btn"></span>
+                <!-- small button close -->
+                <!-- mainmenu begin -->
+                <nav>
+                    <ul id="mainmenu">
+                        <li><a href="@Url.Action("Home", "Home")">Home</a></li>
+                        <li><a href="@Url.Action("Menu", "Home")">menu</a></li>
+                        <li><a href="@Url.Action("Booking", "Home")">Booking</a></li>
+                        <li>
+                            <a href="@Url.Action("About", "Home")">About</a>
+                            <ul>
+                                <li><a href="@Url.Action("About", "Home")">About</a></li>
+                                <li><a href="@Url.Action("Gallery", "Home")">Gallery</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="@Url.Action("Blog", "Home")">Blog</a></li>
+                        
+                        <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="clearfix"></div>
+            </div>
+            <!-- mainmenu close -->
+
+        </div>
+    </div>
+</header>
+<!-- header close -->

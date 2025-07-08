@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "_Layout";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="~/Content/03_images/icon.png" type="image/gif" sizes="16x16">
+    <title>CroissoCafé</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- CSS Files
+    ================================================== -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/plugins.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/style.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/coloring.css" type="text/css">
+
+    <!-- css for scheme color -->
+    <link rel="stylesheet" href="~/Content/css/colors/cream.css" type="text/css" id="colors">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="~/Content/css/03_custom.css" type="text/css">
+
+    <!-- Slider Revolution Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="~/Content/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/revolution/css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/rev-settings.css">
+
+    <!-- my added css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+</head>
+
+<body class="dark-scheme">
+
+    <div id="wrapper">
+
+        <!-- header begin -->
+        @Html.Action("Header", "Home")
+        <!-- header close -->
+
+        @RenderBody()
+
+        <!-- footer begin -->
+        @Html.Action("Footer", "Home")
+        <!-- footer close -->
+
+        <div id="preloader">
+            <div class="preloader1"></div>
+        </div>
+    </div>
+
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="~/Content/js/plugins.js"></script>
+    <script src="~/Content/js/cafe.js"></script>
+
+    <!-- RS5.0 Core JS Files -->
+    <script src="~/Content/revolution/js/jquery.themepunch.tools.min838f.js?rev=5.0"></script>
+    <script src="~/Content/revolution/js/jquery.themepunch.revolution.min838f.js?rev=5.0"></script>
+
+    <!-- RS5.0 Extensions Files -->
+    <script src="~/Content/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/Content/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            // revolution slider
+            jQuery("#revolution-slider").revolution({
+                sliderType: "standard",
+                sliderLayout: "fullscreen",
+                delay: 3500,
+                navigation: {
+                    arrows: { enable: true }
+                },
+                parallax: {
+                    type: "mouse",
+                    origo: "slidercenter",
+                    speed: 2000,
+                    levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
+                },
+                spinner: "off",
+                gridwidth: 1140,
+                gridheight: 600,
+                disableProgressBar: "on"
+            });
+        });</script>
+
+    <script>
+        document.getElementById('contact_form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent actual form submission
+            alert('Your message has been sent successfully!');
+            this.reset(); // Clears all the input fields
+        });
+    </script>
+
+
+</body>
+
+</html>
